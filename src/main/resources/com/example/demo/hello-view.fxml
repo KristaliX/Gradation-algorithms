@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1280.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <children>
+        <MenuBar prefHeight="25.0" prefWidth="1920.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Файл">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openFile" text="Открыть" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Преобразовать">
+                    <items>
+                  <MenuItem mnemonicParsing="false" onAction="#convertToRGB" text="Исходное" />
+                  <MenuItem mnemonicParsing="false" onAction="#convertToGrayScale" text="Полутоновое" />
+                        <MenuItem mnemonicParsing="false" onAction="#convertToBinary" text="Бинарное" />
+                  <MenuItem mnemonicParsing="false" onAction="#convertToNegative" text="Негатив" />
+                  <MenuItem mnemonicParsing="false" onAction="#convertWithLogarithm" text="Логарифмическое" />
+                  <MenuItem mnemonicParsing="false" onAction="#convertWithDegree" text="Степенное" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5" />
+      <TextField fx:id="logParam" layoutX="203.0" layoutY="99.0" />
+      <Label layoutX="62.0" layoutY="103.0" text="Параметр логарифма (c)" />
+      <Button fx:id="okButton" layoutX="141.0" layoutY="185.0" mnemonicParsing="false" onAction="#clickOK" prefHeight="25.0" prefWidth="112.0" text="OK" />
+      <Label layoutX="143.0" layoutY="147.0" prefHeight="27.0" prefWidth="119.0" text="s = c*log(1+r)">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="degreeParamC" layoutX="712.0" layoutY="62.0" />
+      <TextField fx:id="degreeParamY" layoutX="712.0" layoutY="99.0" />
+      <Label layoutX="588.0" layoutY="66.0" text="Параметр степени (c)" />
+      <Label layoutX="588.0" layoutY="103.0" text="Параметр степени (y)" />
+      <Label layoutX="670.0" layoutY="147.0" text="s = c*r^y">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="okButton2" layoutX="656.0" layoutY="185.0" mnemonicParsing="false" onAction="#clickOK2" prefHeight="25.0" prefWidth="112.0" text="OK" />
+    </children>
+</AnchorPane>
